@@ -1,0 +1,41 @@
+<div class="buttonHolder"  @fadeInAnimation1 @scaleForm>
+<div><img class="width_50 " alt="Angular Logo" src="../../assets/images/tesla_flag.png"></div>
+<div>
+  <h4>
+    Welcome to
+  </h4>
+  <h5>
+   TOOLBOX {{ title | uppercase }} POLL
+  </h5>
+ </div>
+</div>
+
+<div class="card">
+
+  <div class='card-body'>
+<div *ngFor="let item of questions; let i=index">
+  <div class="card-header" *ngIf="i === 1">{{item.question}}</div>
+</div>
+<hr>
+<div>
+<form id="frmTeslaPoll" #frmTeslaPoll="ngForm" (ngSubmit)="submitAnswer(frmTeslaPoll)">
+  <div *ngFor="let item of questions">
+    <label for="poll_answer_{{item.id}}">
+        <input
+          id="poll_answer_{{item.id}}"
+          value="{{item.poll_id}}_{{item.id}}"
+          type="radio"
+          name="pool_answers"
+          (click)="hasAnswerSelected=true"
+          (ngModel)="item.answer"
+        >
+        <span class="left_10_padding" *ngIf="item.poll_answer.toLowerCase() !== 'no' && item.poll_answer.toLowerCase() !== 'yes'">{{item.poll_answer}}</span>
+        <i *ngIf="item.poll_answer.toLowerCase() === 'no'" class="fa fa-thumbs-o-down red-text left_10_padding" aria-hidden="true"></i>
+        <i *ngIf="item.poll_answer.toLowerCase() === 'yes'" class="fa fa-thumbs-o-up green-text left_10_padding" aria-hidden="true"></i>
+    </label>
+  </div>
+  <hr>
+     <div class="buttonHolder"><button class="btn btn-mdb-color waves-effect">Submit</button></div>
+</form>
+<div class="alert alert-danger bodyTompMargin align-text error-message-alert"  *ngIf="!hasAnswerSelected"  @fadeInAnimation1>Please select one option</div>
+</div>

@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+$content_width: (100% / 2);
+$text_center: center;
+
+.content {
+  width: $content_width;
+  margin: auto;
+  background: white;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.bodyTopMargin {
+  margin-top: 30px !important;
+}
+
+.align-text{
+  text-align: $text_center
+}
+
+.error-message-alert{
+  font-size: 14pt;
+}
+
+.buttonHolder{
+  text-align: center;
+}
+
+.left_10_padding {
+  padding-left: 10px;
+}
+
+.width_50{
+  width: 50px;
+}
+
+.background{
+  background-color: #F7F7F7;
+}
