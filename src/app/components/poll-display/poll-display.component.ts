@@ -55,6 +55,7 @@ export class PollDisplayComponent implements OnInit {
   public doughnutChartLabels: string[] = [''];
   public doughnutChartData = [];
   public doughnutChartType = 'doughnut';
+  logosource = 'https://toolbox.teslamotors.com/assets/images/tesla_flag.png';
 
   public chartOptions: any = {
     pieceLabel: {

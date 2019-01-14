@@ -56,6 +56,7 @@ export class PollRequestComponent implements OnInit {
   count = 0;
   url = '';
   hasAnswerSelected = true;
+  logosource = 'https://toolbox.teslamotors.com/assets/images/tesla_flag.png';
 
   constructor(
     public rest: TeslaRestService,
