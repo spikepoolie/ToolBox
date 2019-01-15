@@ -57,15 +57,15 @@ export class PollDisplayComponent implements OnInit {
   public doughnutChartType = 'doughnut';
   logosource = 'https://toolbox.teslamotors.com/assets/images/tesla_flag.png';
 
-  public chartOptions: any = {
-    pieceLabel: {
-      render: function (args) {
-        const label = args.doughnutChartLabels,
-          value = args.mydata;
-        return label + ': ' + value;
-      }
-    }
-  };
+  // public chartOptions: any = {
+  //   pieceLabel: {
+  //     render: function (args) {
+  //       const label = args.doughnutChartLabels,
+  //         value = args.mydata;
+  //       return label + ': ' + value;
+  //     }
+  //   }
+  // };
 
   constructor(
     public rest: TeslaRestService,
@@ -74,9 +74,12 @@ export class PollDisplayComponent implements OnInit {
 
   ngOnInit() {
     this.pollid = localStorage.getItem('questionid');
+
+    // rest call to get the poll answers
     this.rest.getAnswers('get_poll_answers.php?pollid=' + this.pollid).subscribe((data: {}) => {
       this.answers = data;
 
+      // populates the chart data
       this.answers.forEach((element) => {
         this.myAnswersLegend.push(element.poll_answer);
         this.mydata.push(Number(element.total));
@@ -88,6 +91,8 @@ export class PollDisplayComponent implements OnInit {
     });
 
   }
+
+  // helpers functions if more functionality gets added to the chart
 
   public chartClicked(e: any): void {
     console.log(e);
