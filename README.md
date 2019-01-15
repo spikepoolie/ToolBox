@@ -7,6 +7,9 @@ Main page will display the poll questions and options and a button to submit the
 
 Display page shows the selected question on the previous page and will display how many time each answer for that specific question has been answered and a pid chart gives a user friendly view of the answers
 
+# Server
+I've used PHP and MySql to run the api
+
 # Work Flow
 There is a PPT "ToolBoxFlow" showing the flow of the project
 
