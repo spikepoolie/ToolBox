@@ -1,29 +1,20 @@
-# Tesla
+# Demo
+https://www.goemobile.com/tesla
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+# Tollbox Tesla Poll
 
-## Development server
+Main page will display the poll questions and options and a button to submit the answer
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Display page shows the selected question on the previous page and will display how many time each answer for that specific question has been answered and a pid chart gives a user friendly view of the answers
 
-## Code scaffolding
+# Server
+I've used PHP and MySql to run the api
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Work Flow
+There is a PPT "ToolBoxFlow" showing the flow of the project
 
-## Build
+# Improvements
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# my-app-demo
-# ToolBox
+Main page could have a reload button if the user wants to get a new question
+Add a work around to display a new question if th same question has been showed lets say 3 times in a row
+Add a new page to create/delete new questions
