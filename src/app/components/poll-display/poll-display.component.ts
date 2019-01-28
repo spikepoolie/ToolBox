@@ -52,20 +52,11 @@ export class PollDisplayComponent implements OnInit {
   mydata: any = [];
   myAnswersLegend = [];
 
+  // chart definitions
   public doughnutChartLabels: string[] = [''];
   public doughnutChartData = [];
   public doughnutChartType = 'doughnut';
   logosource = 'https://toolbox.teslamotors.com/assets/images/tesla_flag.png';
-
-  // public chartOptions: any = {
-  //   pieceLabel: {
-  //     render: function (args) {
-  //       const label = args.doughnutChartLabels,
-  //         value = args.mydata;
-  //       return label + ': ' + value;
-  //     }
-  //   }
-  // };
 
   constructor(
     public rest: TeslaRestService,
